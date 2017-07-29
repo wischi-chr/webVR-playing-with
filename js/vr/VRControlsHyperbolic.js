@@ -44,19 +44,24 @@ THREE.VRControls = function ( camera, done ) {
 
 	this.manualRotation = quat.create();
 
+	
+
+	
 	this.manualControls = {
-      65 : {index: 1, sign: 1, active: 0},  // a
-      68 : {index: 1, sign: -1, active: 0}, // d
-      87 : {index: 0, sign: 1, active: 0},  // w
-      83 : {index: 0, sign: -1, active: 0}, // s
-      81 : {index: 2, sign: -1, active: 0}, // q
-      69 : {index: 2, sign: 1, active: 0},  // e
-      38 : {index: 3, sign: 1, active: 0},  // up
-      40 : {index: 3, sign: -1, active: 0}, // down
-      37 : {index: 4, sign: -1, active: 0}, // left
-      39 : {index: 4, sign: 1, active: 0},   // right
-      222 : {index: 5, sign: 1, active: 0}, // single quote
-      191 : {index: 5, sign: -1, active: 0},   // fwd slash
+        /* Q */ 81 : {index: 1, sign: 1, active: 0}, 
+		/* E */ 69 : {index: 1, sign: -1, active: 0}, 
+		/* DOWN  */ 40 : {index: 0, sign: 1, active: 0},  
+		/* UP    */ 38 : {index: 0, sign: -1, active: 0}, 
+		/* RIGHT */ 39 : {index: 2, sign: -1, active: 0}, 
+		/* LEFT  */ 37 : {index: 2, sign: 1, active: 0}, 
+		/* S */ 83 : {index: 3, sign: -1, active: 0},
+		/* W */	87 : {index: 3, sign: 1, active: 0},
+		/* D */ 68 : {index: 4, sign: 1, active: 0},
+		/* A */ 65 : {index: 4, sign: -1, active: 0},
+		/* / */ 191 : {index: 5, sign: 1, active: 0},
+		/* ' */ 222 : {index: 5, sign: -1, active: 0},
+	  
+	  
       73 : {index: 7, sign: -1, active: 0},   // i
       75 : {index: 7, sign: 1, active: 0},   // k
       74 : {index: 6, sign: 1, active: 0},   // j
